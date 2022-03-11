@@ -1,0 +1,27 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+    <id>default</id>
+    <formats>
+        <format>dir</format>
+        <format>tar.gz</format>
+    </formats>
+    <baseDirectory>.</baseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>${basedir}/agent</directory>
+            <outputDirectory>./agent</outputDirectory>
+        </fileSet>
+    </fileSets>
+
+    <dependencySets>
+        <dependencySet>
+            <includes>
+                <include>com.perfma.demo:agent-autoload</include>
+            </includes>
+            <outputDirectory>./</outputDirectory>
+            <outputFileNameMapping>agent-autoload.jar</outputFileNameMapping>
+        </dependencySet>
+    </dependencySets>
+
+</assembly>

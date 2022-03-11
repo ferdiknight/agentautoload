@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: agent/demoagent-1.0.0-SNAPSHOT.jar
+Launcher-Agent-Class: com.perfma.demo.demoagent.Agent
+Main-Class: com.perfma.demo.agent.autoload.Main
